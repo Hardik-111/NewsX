@@ -56,6 +56,7 @@ const News = (props) => {
         hasMore={articles.length !== totalResults}
         loader={<Spinner />}
       >
+         <div className={`container ${props.darkMode ? "text-light" : ""}`}></div>
         <div className="container">
           <div className="row">
             {articles.map((element) => {
@@ -92,3 +93,4 @@ News.propTypes = {
 };
 
 export default News;
+
