@@ -1,13 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
-    <div>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div className={`navbar ${darkMode ? 'dark-mode' : ''}`}>
+      <nav
+        className={`navbar fixed-top navbar-expand-lg ${
+          darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
+        }`}
+      >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/home">
-            <h3>NewsX</h3>
+          <Link className="navbar-brand" to="/">
+            <h3 style={{ color: darkMode ? "white" : "black" }}>NewsX</h3>
           </Link>
           <button
             className="navbar-toggler"
@@ -22,42 +31,29 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link" to="/home">
-                  Home
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/business">
-                  Business
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/sports">
-                  Sports
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/entertainment">
-                  Entertainment
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/health">
-                  Health
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/science">
-                  Science
-                </Link>{" "}
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/technology">
-                  Technology
-                </Link>{" "}
-              </li>
+              {['Home', 'Business', 'Sports', 'Entertainment', 'Health', 'Science', 'Technology'].map((item, index) => (
+                <li className="nav-item" key={index}>
+                  <Link className="nav-link" to={`/${item.toLowerCase()}`}>
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
+            <div className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="darkModeToggle"
+                checked={darkMode}
+                onChange={toggleDarkMode}
+              />
+              <label
+                className={`form-check-label ${darkMode ? "text-light" : "text-dark"}`}
+                htmlFor="darkModeToggle"
+              >
+                Dark Mode
+              </label>
+            </div>
           </div>
         </div>
       </nav>
