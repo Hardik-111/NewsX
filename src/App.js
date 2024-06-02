@@ -17,37 +17,42 @@ const App = () => {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <LoadingBar color="#f11946" progress={progress} />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="./">
             <News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country="in"
               category="general" darkMode={darkMode}  
             />
           </Route>
-          <Route exact path="/business">
+          <Route exact path="./home">
+            <News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country="in"
+              category="general" darkMode={darkMode}  
+            />
+          </Route>
+          <Route exact path="./business">
             <News setProgress={setProgress} apiKey={apiKey}  key="business" pageSize={pageSize}  country="in"
               category="business" darkMode={darkMode}
             />
           </Route>
-          <Route exact path="/sports">
+          <Route exact path="./sports">
             <News setProgress={setProgress} apiKey={apiKey}  key="sports" pageSize={pageSize} country="in"
               category="sports" darkMode={darkMode}
             />
           </Route>
-          <Route exact path="/entertainment">
+          <Route exact path="./entertainment">
             <News setProgress={setProgress} apiKey={apiKey}  key="entertainment" pageSize={pageSize}  country="in"
               category="entertainment" darkMode={darkMode}
             />
           </Route>
-          <Route exact path="/health">
+          <Route exact path="./health">
             <News setProgress={setProgress} apiKey={apiKey}  key="health" pageSize={pageSize} country="in"
               category="health"  darkMode={darkMode}
             />
           </Route>
-          <Route exact path="/science">
+          <Route exact path="./science">
             <News setProgress={setProgress} apiKey={apiKey}  key="science"pageSize={pageSize} country="in"
               category="science" darkMode={darkMode}
             />
           </Route>
-          <Route exact path="/technology">
+          <Route exact path="./technology">
             <News setProgress={setProgress} apiKey={apiKey} key="technology" pageSize={pageSize} country="in"
               category="technology" darkMode={darkMode}
             />
@@ -56,7 +61,7 @@ const App = () => {
       </Router>
       <footer className="container-fluid bg-dark my-0 py-3 text-light">
         <p className="mb-0 text-center">
-          Copyright © 2020-2021 NewsX@Hardik.com
+          Copyright © 2023-2024 NewsX@Hardik
         </p>
       </footer>
     </div>
