@@ -15,7 +15,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         }`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="./">
+          <Link className="navbar-brand" to="/">
             <h3 style={{ color: darkMode ? "white" : "black" }}>NewsX</h3>
           </Link>
           <button
