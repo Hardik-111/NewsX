@@ -15,7 +15,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         }`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="./">
+          <Link className="navbar-brand" to="/">
             <h3 style={{ color: darkMode ? "white" : "black" }}>NewsX</h3>
           </Link>
           <button
@@ -33,7 +33,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {['Home', 'Business', 'Sports', 'Entertainment', 'Health', 'Science', 'Technology'].map((item, index) => (
                 <li className="nav-item" key={index}>
-                  <Link className="nav-link" to={`./${item.toLowerCase()}`}>
+                  <Link className="nav-link" to={`/${item.toLowerCase()}`}>
                     {item}
                   </Link>
                 </li>
