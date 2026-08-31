@@ -31,14 +31,6 @@ NewsX is a React-based web application that revolutionizes the way you access ne
 - **CSS:** 
 
 
----
-## 👨‍💻 Author
-
-Built with 💻 by **[Hardik Kumar Singh](https://github.com/Hardik-111)**. 
-
-Feel free to check out my [GitHub Profile](https://github.com/Hardik-111) for more backend engineering projects, or connect with me via my [Portfolio](https://hardik-portfolio-new.vercel.app).
-
-
 ## Screenshots
 
 ![NewsX Home](https://github.com/Hardik-111/NewsX/assets/89783619/720dc543-078f-4e14-8692-27c3c483b690)
@@ -48,4 +40,11 @@ Feel free to check out my [GitHub Profile](https://github.com/Hardik-111) for mo
 ![NewsX Health](https://github.com/Hardik-111/NewsX/assets/89783619/7c5ae468-db91-4b77-9d75-530299eba424)
 ![NewsX Science](https://github.com/Hardik-111/NewsX/assets/89783619/2d3575c8-3da1-4b97-b4a0-986c3a75ceb4)
 ![NewsX Technology](https://github.com/Hardik-111/NewsX/assets/89783619/90044a25-3b9c-4052-a6da-cad63d9849ed)
+
+---
+## 👨‍💻 Author
+
+Built with 💻 by **[Hardik Kumar Singh](https://github.com/Hardik-111)**. 
+
+Feel free to check out my [GitHub Profile](https://github.com/Hardik-111) for more backend engineering projects, or connect with me via my [Portfolio](https://hardik-portfolio-new.vercel.app).
 
